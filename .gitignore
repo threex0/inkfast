@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist.tmp-*
+.blog-cache/
+.env
+# Personal site settings override the committed blog.config.json.
+blog.config.local.json
+*.log
+.DS_Store
+Thumbs.db
+content/pages/*
+content/posts/*

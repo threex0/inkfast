@@ -1,0 +1,25 @@
+{
+  "name": "inkfast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal static blog generator with instant client-side search and incremental FTP publishing.",
+  "bin": {
+    "inkfast": "./src/cli.js"
+  },
+  "scripts": {
+    "build": "node src/cli.js build",
+    "dev": "node src/cli.js dev",
+    "preview": "node src/cli.js preview",
+    "publish": "node src/cli.js publish",
+    "new": "node src/cli.js new",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "basic-ftp": "^6.2.6",
+    "marked": "^15.0.0"
+  }
+}

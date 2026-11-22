@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "My Blog",
+    "description": "",
+    "url": "",
+    "author": "",
+    "lang": "en",
+    "basePath": "/",
+    "homePage": "",
+    "nav": [
+      { "label": "Archive", "href": "/archive/" },
+      { "label": "Tags", "href": "/tags/" }
+    ]
+  },
+  "build": {
+    "contentDir": "content",
+    "outDir": "dist",
+    "postsPerPage": 20,
+    "feedLimit": 20,
+    "includeFuture": false,
+    "devPort": 3000,
+    "previewPort": 3001,
+    "searchTextLimit": 12000
+  },
+  "deploy": {
+    "host": "",
+    "port": 21,
+    "user": "",
+    "password": "",
+    "secure": false,
+    "remoteDir": "/",
+    "timeout": 30000,
+    "verbose": false
+  }
+}
