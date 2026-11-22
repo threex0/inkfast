@@ -201,6 +201,7 @@ Notes:
 - `site.basePath` is `/` for a site at the domain root, or `/blog/` for a subdirectory. All internal links, assets, and search URLs are prefixed.
 - `site.homePage` — set it to a page slug (for example `"about"`) to render that page at `/` instead of the post list. The blog listing then moves to `/blog/` (and `/blog/page/2/`, …). Leave it empty to keep the post list on the home page. Add a `Blog` link to `site.nav` if you want one.
 - `nav` hrefs are site-relative; absolute `http(s)://` links are used as-is, so you can point at another site (for example `{ "label": "lVl", "href": "https://designeragents.com/lvl/" }`).
+- Add `"icon": "linkedin"` to a nav item to render an icon-only link; the label becomes its accessible name. Supported icons: `linkedin`. Unknown icon names fall back to a text link.
 - `build.searchTextLimit` caps how much plain text each post contributes to the search index.
 - Keep personal values (title, author, domain, nav) in `blog.config.local.json`. It is gitignored, so the committed config stays generic. Any key you omit there falls back to `blog.config.json`.
 - Keep credentials in `.env` (or environment variables), not in the committed config.

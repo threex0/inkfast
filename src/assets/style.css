@@ -220,6 +220,15 @@ kbd {
   stroke-linejoin: round;
 }
 
+.icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+
+.site-nav > a.nav-icon {
+  padding: 0.34rem 0.45rem;
+}
+
 .search-trigger kbd {
   margin-left: 0.1rem;
 }

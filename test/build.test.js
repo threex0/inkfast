@@ -253,6 +253,12 @@ test("nav supports external links without a base-path prefix", async (t) => {
       nav: [
         { label: "Blog", href: "/blog/" },
         { label: "lVl", href: "https://designeragents.com/lvl/" },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/example/",
+          icon: "linkedin",
+        },
+        { label: "RSS", href: "/feed.xml", icon: "not-a-real-icon" },
       ],
     },
   });
@@ -263,6 +269,13 @@ test("nav supports external links without a base-path prefix", async (t) => {
     home,
     /<a href="https:\/\/designeragents\.com\/lvl\/">lVl<\/a>/,
   );
+  assert.match(
+    home,
+    /<a class="nav-icon" href="https:\/\/www\.linkedin\.com\/in\/example\/" aria-label="LinkedIn" title="LinkedIn">/,
+  );
+  assert.match(home, /<svg class="icon icon-fill" aria-hidden="true" focusable="false"/);
+  assert.match(home, /<path d="M0 1\.146/);
+  assert.match(home, /<a href="\/site\/feed\.xml">RSS<\/a>/);
 });
 
 test("duplicate or reserved slugs fail with a helpful message", async (t) => {
